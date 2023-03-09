@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: backend.coding.challenge
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=backend_coding_challenge
+    username: postgres
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      jdbc:
+        time-zone: Europe/Bucharest
+  sql:
+    init:
+      mode: never
