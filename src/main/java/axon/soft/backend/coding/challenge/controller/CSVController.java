@@ -29,7 +29,7 @@ public class CSVController {
         this.csvService = csvService;
     }
     @PostMapping(value = "/api/import")
-    public ResponseEntity<List<RoomDTO>> getRoomSitting(@RequestParam("file") MultipartFile multipartFile) throws IOException, CsvException {
+    public ResponseEntity<List<RoomDTO>> addRoomDistribution(@RequestParam("file") MultipartFile multipartFile) throws IOException, CsvException {
         List<RoomDTO> response;
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(multipartFile.getInputStream()))) {
             response = csvService.readRoomSittingFromCSV(reader);
